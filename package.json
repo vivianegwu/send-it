@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./",
-    "start":"node build/server.js",
-    "build":"babel server.js -d dist"
+    "lint": "eslint ./server",
+    "start": "node build/server.js",
+    "build": "babel src --out-dir dist",
+    "start:dev": "npm run nodemon && lint --exec babel-node src/server.js"
   },
-  "start:dev": "npm run nodemon && lint --exec babel.node ./server/server.js",
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vivianegwu/send-it.git"

@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./server",
     "start": "node build/server.js",
-    "build": "babel src --out-dir dist",
-    "start:dev": "npm run nodemon && lint --exec babel-node src/server.js"
+    "build": "babel server --out-dir build",
+    "start:dev": "npm run lint && nodemon --exec babel-node server/server.js"
   },
   
   "repository": {

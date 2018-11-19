@@ -4,7 +4,7 @@
   "description": "\"parcel delivery app\"",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && nyc --reporter=html mocha --require @babel/register ./tests/*.js --exit && npm run coverage",
+    "test": "nyc --reporter=html mocha --require @babel/register ./tests/*.js --exit && npm run coverage",
     "lint": "eslint ./",
     "start": "node build/server.js",
     "prestart": "npm run build",
